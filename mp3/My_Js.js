@@ -9,11 +9,11 @@ function ZingMp3() {
             var obj = JSON.parse(xmlHttp.responseText);
             for (var i = 0; i < obj.length; i++) {
                 var  songs_item= '<li>';
-                songs_item += '<label class="id"> ' + (i+1) + '</label>';
+                songs_item += '<label> ' + (i+1) + '</label>';
                  songs_item += '<span>';
-                 songs_item += '<img height="70px" src="'+ obj[i].thumbnail +'" alt="">';
+                 songs_item += '<img height="80px" src="'+ obj[i].thumbnail +'" alt="">';
                  songs_item += '</span>';
-                 songs_item += '<label class="name">'+ obj[i].name + '</label>';
+                 songs_item += '<label>'+ obj[i].name + '</label>';
                  songs_item += '</li>';
                 content.innerHTML +=  songs_item;
             }
@@ -22,4 +22,6 @@ function ZingMp3() {
 
     };
     xmlHttp.open("GET", API, true);
-    xmlHttp.send();
+    xmlHttp.send();s
+
+}
